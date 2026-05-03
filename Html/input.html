@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input</title>
+    <style>
+        table {
+            margin: 10px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="2">
+        <tr>
+            <th>
+                <h2>Log In with UserName and <br> password</h2>
+                <label for="username">Enter your User Name</label>
+                <input type="text" id="username" placeholder="user name">
+
+                <br><br>
+                <label for="password">Enter Your Password</label>
+                <input type="password" placeholder="password">
+
+                <br><br>
+                <button onclick="">submit</button>
+            </th>
+        </tr>
+
+
+    </table>
+
+    <div>
+        <form action="">
+            <div>
+                <h2>Log In with UserName and <br> password</h2>
+                <label for="username">Enter your User Name</label>
+                <input type="text" id="username" placeholder="user name">
+            </div>
+            <div>
+                <label for="password">Enter Your Password</label>
+                <input type="password" placeholder="password">
+            </div>
+            <div>
+                <button onclick="">submit</button>
+            </div>
+        </form>
+    </div>
+
+    <h3>This is a form copied from websites </h3>
+    <form action="/submit" method="post">
+    <!-- Text input for username -->
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    <br><br>
+
+    <!-- Password input -->
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    <br><br>
+
+    <!-- Radio buttons for gender -->
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label>
+    <br><br>
+
+    <!-- Submit button -->
+    <input type="submit" value="Submit">
+</form>
+</body>
+
+</html>
