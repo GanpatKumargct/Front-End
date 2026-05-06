@@ -2,12 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: rgb(176, 233, 91);
+   
 }
 
 html, body{
     height: 100%;
     width: 100%;
+    background-color: rgb(176, 233, 91);
 }
 
 nav{
@@ -34,5 +35,87 @@ nav a{
     font-size: 20px;
     color: black;
     text-decoration: none;
+}
 
+nav a:hover{
+    color: rgb(15, 241, 230);
+}
+section{
+    /* background-color: blueviolet; */
+    padding: 20px 100px;
+}
+
+section .hero-Text1{
+    /* background-color: burlywood; */
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.hero-Text1{
+    font-size: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
+    font-weight: 400;
+
+}
+
+.hero-Text1 .videos{
+    height: 80px;
+    width: 300px;
+    /* background-color: darkgray; */
+    border-radius: 40px;
+    margin-top: 40px;
+    background-image: url(https://images.unsplash.com/photo-1494232410401-ad00d5433cfa?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzaWMlMjBwbGF5ZXJ8ZW58MHx8MHx8fDA%3D);
+    background-size: cover;
+    background-position: right;
+}
+
+
+.videos .play{
+    width: 70px;
+    height: 70px;
+    /* padding: 0px; */
+    margin-left: 10px;
+    margin-top: 5px;
+    border-radius: 50px;
+    background-color: rgb(8, 6, 4);
+    background-image: url(https://media.istockphoto.com/id/2149054074/photo/neon-play-button-icon-3d-rendering-press-to-play-glowing-blue-color-play-button-on-black.webp?a=1&b=1&s=612x612&w=0&k=20&c=bYlX5vQ6URYjOFxIjChvq4QBZqLJjQHWQ6fEtbKS26s=);
+    background-size: cover;
+    background-position: center;
+}
+section .hero-text2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.hero-text2 h1{
+    font-size: 180px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: capitalize;
+    font-weight: 300;
+
+}
+
+.hero-text2 p{
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    /* text-transform: capitalize; */
+    font-weight: 300;
+    margin-top: 110px;
+    margin-left: 100px;
+}
+
+
+.best{
+    border: 1px solid green;
+    padding: 5px 30px;
+    border-radius: 20px;
+}
+
+.world-agency{
+    border: 1px solid green;
+    padding: 5px 30px;
+    border-radius: 20px;
 }
