@@ -1,7 +1,9 @@
+import logo from "@/assets/images/Guild_Logo_White-1.png";
+
 function GuildLogo({ className = "h-9 w-9", theme = "dark" }) {
   return <div className={`${className} flex items-center justify-center`}>
       <img
-    src="/src/imports/Guild_Logo_White-1.png"
+    src={logo}
     alt="The Guild"
     className="w-full h-full object-contain transition-all duration-300"
     style={{
