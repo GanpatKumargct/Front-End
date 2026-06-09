@@ -1,13 +1,11 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { setLoginSuccess } from '../../shared/store/authSlice';
 import { GuildLogo } from '../../shared/components/GuildLogo';
-import type { RootState } from '../store';
 
 export default function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const theme = useSelector((state: RootState) => state.ui.theme);
 
   const handleAccessPlatform = () => {
     const useMocks = import.meta.env.VITE_USE_MOCKS === 'true';
@@ -32,35 +30,36 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center relative overflow-hidden">
-      {/* Visual Decorator Background */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2">
-        <GuildLogo className="h-20 w-20" theme={theme} />
+    <div className="min-h-screen bg-[#09090b] flex flex-col items-center justify-center p-6 relative">
+      {/* Top Center Logo */}
+      <div className="mb-10 flex justify-center">
+        <GuildLogo className="h-24 w-24" theme="dark" />
       </div>
 
-      <div className="w-[480px] rounded-2xl border border-border bg-card/60 backdrop-blur-xl p-10 flex flex-col items-center text-center shadow-2xl">
-        <p className="text-xs tracking-[0.3em] uppercase text-muted-foreground mb-4">
-          Welcome back, Gautham
+      {/* Login Card */}
+      <div className="w-full max-w-[440px] rounded-2xl border border-zinc-800/80 bg-[#121214] p-10 flex flex-col items-center text-center shadow-xl">
+        <p className="text-[10px] tracking-[0.25em] uppercase text-zinc-500 mb-6 font-medium">
+          WELCOME BACK, GAUTHAM
         </p>
 
         <h1
-          className="text-3xl mb-3 text-foreground"
+          className="text-[32px] text-white mb-2 leading-none"
           style={{
             fontFamily: 'Fauna One, serif',
-            fontWeight: 100,
-            letterSpacing: '0.06em',
+            fontWeight: 400,
+            letterSpacing: '0.04em',
           }}
         >
           The Guild ERP
         </h1>
 
-        <p className="text-sm text-muted-foreground max-w-sm leading-relaxed mb-10">
+        <p className="text-xs text-zinc-500 max-w-sm leading-relaxed mb-8">
           Unified Enterprise Operations Platform
         </p>
 
         <button
           onClick={handleAccessPlatform}
-          className="px-8 py-3 rounded-xl bg-foreground text-background text-sm font-medium hover:opacity-90 transition-all duration-200 cursor-pointer shadow-md"
+          className="w-full py-3.5 rounded-xl bg-white text-zinc-950 text-sm font-semibold hover:bg-zinc-100 transition-colors shadow-md cursor-pointer focus:outline-none focus:ring-2 focus:ring-zinc-700"
         >
           Access Platform
         </button>
