@@ -7,6 +7,9 @@ export default function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const lastUserName = localStorage.getItem('last_user_name') || 'Gautham';
+  const firstName = lastUserName.split(' ')[0] || 'GAUTHAM';
+
   const handleAccessPlatform = () => {
     const useMocks = import.meta.env.VITE_USE_MOCKS === 'true';
 
@@ -21,6 +24,7 @@ export default function Login() {
       };
 
       dispatch(setLoginSuccess({ token: mockToken, user: mockUser }));
+      localStorage.setItem('last_user_name', mockUser.name);
       navigate('/');
     } else {
       // Live backend Zoho SSO login flow redirect
@@ -39,7 +43,7 @@ export default function Login() {
       {/* Login Card */}
       <div className="w-full max-w-[440px] rounded-2xl border border-zinc-800/80 bg-[#121214] p-10 flex flex-col items-center text-center shadow-xl">
         <p className="text-[10px] tracking-[0.25em] uppercase text-zinc-500 mb-6 font-medium">
-          WELCOME BACK, GAUTHAM
+          WELCOME BACK, {firstName.toUpperCase()}
         </p>
 
         <h1

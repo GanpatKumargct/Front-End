@@ -30,6 +30,7 @@ export default function AuthCallback() {
           }
 
           dispatch(setLoginSuccess({ token, user: userProfile }));
+          localStorage.setItem('last_user_name', userProfile.name);
           navigate('/');
         } catch (error) {
           console.error('SSO Authentication profile fetch failed:', error);
