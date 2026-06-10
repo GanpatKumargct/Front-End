@@ -16,4 +16,13 @@ let ref = "kumar"
 ref = "yadav"
 
 
-// Union 
+// Union - yeah tino me se koi bhi valida hai
+let sub : number | String | boolean = true
+
+// actul use : - production
+let apirequest : 'Pending'| 'Success' | 'Draft' = "Draft"
+
+// apirequest = "sddf" - throws error kyuki isme se koi lega jo defined hai 
+
+// any
+let value;
