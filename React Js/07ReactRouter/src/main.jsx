@@ -7,6 +7,7 @@ import Home from './components/Home/Home'
 import About from './components/About/About'
 import Contact from './components/Contact/ContactUs'
 import User from './components/User/User'
+import Github, { githubInfoLoader } from './components/Github/Github'
 
 
 //route done by nested array
@@ -40,6 +41,7 @@ const router = createBrowserRouter(
       <Route path='about' element={<About/>}/>
       <Route path='contactUs' element={<Contact/>}/>
       <Route path='user/:id' element={<User/>}/>
+      <Route loader={githubInfoLoader} path='github' element={<Github/>}/>
 
     </Route>
   )
